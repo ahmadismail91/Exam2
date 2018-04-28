@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Exam 2 Problem</title>
+	<link	rel="stylesheet"type="text/css"	href="style/Exam2problem.css"/>
+	<script	src="js/Exam2problem.js"></script>
+</head>
+
+<body>
+<br>
+<section>
+    <select  id="menu" onchange="MenuChoice()">
+          <option value="Please select an option" selected >Please select an option</option>
+          <option value="Display Category List">Display Category List</option>
+          <option value="Create a Category">Create a Category</option>
+          <option value = "Update Category Description ">Update Category Description</option>
+          <option value = "Delete a Category">Delete a Category</option>
+          <option value = "About The Developer">About The Developer</option>
+    </select>
+ </section>
+
+ <section id = section1 class="Sec" >
+         <br>
+        
+        <label id ="CatTable"></label>
+ </section>
+
+ <section id = section2 class="Sec" >
+        <br><label>Enter a new Category Name: </label>
+	<input	type="text" id="CatName2">
+        <br>
+	<label>  Enter Category Description:</label>
+        <input	type="text" id="CatDescribtion2">
+        <br>
+        <br>
+        <button onclick="CreateCat()">Create Category</button>
+        <br><label id= "result"></label>
+        
+ </section>
+
+   
+<section id = section3 class="Sec" >
+        <br><label>Enter the Category ID you want to update: </label>
+	<input	type="text" id="CatID3">
+        <br>
+	<label>  Enter a new Category Describtion:</label>
+        <input	type="text" id="CatDescribtion3">
+        <br>
+         <br>
+            <button onclick="UpdateCategory()">Update Category</button>
+            <br><label id= "result2"></label>
+        <br>
+ </section>
+
+<section id = section4 class="Sec" >
+        <br><label>Enter the Category ID you want to delete: </label>
+	<input	type="text" id="CatID4">
+        <br> <br>
+        <button onclick="Confirm()">Delete</button>
+        <script>
+        function Confirm() {
+            if (confirm("Press (OK) to confirm deleting this Catagory"))
+            DeleteCat();
+            }
+        </script>
+ <br> <label id="result3"></label>
+</section>
+
+
+<section id = section5 class="Sec" >
+      <br> <label class= About> Developer Name: Ahmad Ismail </label>
+        <br>
+	<label class= About>Date of Birth: August-20-1987</label>
+        <br>
+        <label class= About>Nationality: Palestinean</label>
+        <br>
+        <label class= About>Social Status: Married</label>
+        <br>
+        <label class= About>Job: Information systems manager and Web developer</label>
+ </section>
+ 
+    
+</body>
+</html>
